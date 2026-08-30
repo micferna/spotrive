@@ -1,24 +1,50 @@
 {
   "expo": {
-    "name": "app_spotrive",
-    "slug": "app_spotrive",
+    "name": "Spotrive",
+    "slug": "spotrive",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "scheme": "spotrive",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#080A0F",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#080A0F",
+      "resizeMode": "contain",
+      "image": "./assets/splash-icon.png"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.spotrive.app"
     },
     "android": {
+      "package": "com.spotrive.app",
+      "navigationBar": {
+        "backgroundColor": "#080A0F"
+      },
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#080A0F",
         "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "permissions": [
+        "android.permission.ACTIVITY_RECOGNITION"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Spotrive utilise ta position pour mesurer la distance, la durée et l'allure de tes courses et de tes marches.",
+          "locationWhenInUsePermission": "Spotrive utilise ta position pour mesurer la distance, la durée et l'allure de tes courses et de tes marches.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ]
+    ]
   }
 }
